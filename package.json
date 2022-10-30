@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imran7rassi/Imrans-Professional-README-Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imran7rassi/Imrans-Professional-README-Generator/issues"
+  },
+  "homepage": "https://github.com/imran7rassi/Imrans-Professional-README-Generator#readme"
 }
