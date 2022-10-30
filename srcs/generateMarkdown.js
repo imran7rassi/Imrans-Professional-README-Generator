@@ -32,13 +32,28 @@
         return ``;
       } else {
       return `## Licenses
-      This project is covered under the ${license} license. To learn more about what this means, click the license button at the top.`
+      This project is covered under the ${license} license.`
       }
     }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
+  ${renderLicenseBadge(data.license)}
+
+  ${data.description}
+
+
+  ## Table of Contents 
+  - [Installation](#installation)
+  - [Usages](#usages)
+  - [Contributions](#contribution)
+  - [Testing](#testing)
+  - [Questions](#questions)
+  - [Additional Info](#additional-info)
+
+
 
 `;
 }
