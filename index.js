@@ -41,7 +41,7 @@ const questions = [
             if (titleInput) {
                 return true;
             } else {
-                console.log('You need to enter a title to your project to continue!');
+                console.log('Every project must have a title. Please try again!');
                 return false;
             }
         }
@@ -83,6 +83,24 @@ const questions = [
     },
 
 
+// this is the contribution guidline of the project //
+// if there is no input for contribution return to an err //
+
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'How should people contribute to this project? (Required)',
+        validate: contributionInput => {
+            if (contributionInput) {
+                return true;
+            } else {
+                console.log('Please provide instructions on how others can contribute to your project.');
+                return false;
+            }
+        }
+    },
+
+
 // this is the usage of the project //
 // if there is no input for usages return to an err //
 
@@ -100,22 +118,6 @@ const questions = [
         }
     },
     
-// this is the contribution guidline of the project //
-// if there is no input for contribution return to an err //
-
-    {
-        type: 'input',
-        name: 'contribution',
-        message: 'How should people contribute to this project? (Required)',
-        validate: contributionInput => {
-            if (contributionInput) {
-                return true;
-            } else {
-                console.log('You need to provide information on how to contribute to the project!');
-                return false;
-            }
-        }
-    },
 
 
 // this is the instruction how to test the project //
@@ -160,6 +162,16 @@ const questions = [
     },
 
 
+// this is the input for your email //
+// if there is no input for email return an err //
+
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Would you like to enter your email address?',
+    },
+
+
 // this is the input for your github username //
 // if there is no input for the github return an err //
 
@@ -177,22 +189,31 @@ const questions = [
         }
     },
 
-
-// this is the input for your email //
-// if there is no input for email return an err //
-
-    {
-        type: 'input',
-        name: 'email',
-        message: 'Would you like to enter your email address?',
-    },
 ];
 
+
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// this is the fucntuin that write the file into the readme file //
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Success!");
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+// this is the function that initialize the app and write to file of Sample-README.md //
+
+function init() {
+    inquirer.prompt(questions)
+    .then(function (userInput) {
+        console.log(userInput)
+        writeToFile("Sample-README.md", generateMarkdown(userInput));
+    });
+}
 
 // Function call to initialize app
 init();
