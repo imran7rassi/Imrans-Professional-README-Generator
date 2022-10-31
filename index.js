@@ -69,7 +69,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'usages',
+        name: 'usage',
         message: 'How do you use this project? (Required)',
         validate: usageInput => {
             if (usageInput) {
@@ -81,7 +81,40 @@ const questions = [
         }
     },
     
+// this is the contribution guidline of the project //
+// if there is no input for contribution return to an err //
 
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'How should people contribute to this project? (Required)',
+        validate: contributionInput => {
+            if (contributionInput) {
+                return true;
+            } else {
+                console.log('You need to provide information on how to contribute to the project!');
+                return false;
+            }
+        }
+    },
+
+
+// this is the instruction how to test the project //
+// if there is no input for the testing return to an err //
+
+    {
+        type: 'input',
+        name: 'testing',
+        message: 'How do you test this project? (Required)',
+        validate: testingInput => {
+            if (testingInput) {
+                return true;
+            } else {
+                console.log('You need to describe it how to test this project!');
+                return false;
+            }
+        }
+    },
 
 ];
 
