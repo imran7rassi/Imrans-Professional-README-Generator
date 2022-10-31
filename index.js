@@ -11,6 +11,25 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 
 const questions = [
 
+
+// this is the name of user //
+// if there is no input for name return to an err //
+
+    {
+    type: 'input',
+    name: 'name',
+    message: 'please Enter your name? (Required)',
+    validate: nameInput => {
+        if (nameInput) {
+            return true;
+        } else {
+            console.log('You need to enter your name!');
+            return false;
+        }
+    }
+    },
+
+
 // this is the title of the project //
 // if there is no title entered return to an err //
 
@@ -116,6 +135,57 @@ const questions = [
         }
     },
 
+
+// this is the option for choosing your license //
+// if there is no input for the license return to an err //
+
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your project (Required)',
+        choices: ['MIT',
+         'Apache',
+         'LGPL',
+         'Mozilla-Public',
+         'GNU-General-Public',
+         'None'],
+        validate: licenseInput => {
+            if (licenseInput) {
+                return true;
+            } else {
+                console.log('You must pick one of the licenses for the project!');
+                return false;
+            }
+        }
+    },
+
+
+// this is the input for your github username //
+// if there is no input for the github return an err //
+
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub Username (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub username!');
+                return false;
+            }
+        }
+    },
+
+
+// this is the input for your email //
+// if there is no input for email return an err //
+
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Would you like to enter your email address?',
+    },
 ];
 
 // TODO: Create a function to write README file

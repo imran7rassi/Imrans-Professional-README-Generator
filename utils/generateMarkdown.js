@@ -68,8 +68,8 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.licenses)}
 
 
-  ## Contributing
-    ${data.contribuing}
+  ## Contributions
+    ${data.contribution}
 
 
   ## Test
@@ -77,7 +77,7 @@ function generateMarkdown(data) {
 
 
   ## Questions
-  If you have questions about this project you can email me ${data.email} through the mail or find my github account ${data.github} .
+  If you have questions about this project you can mail me ${data.email} or find my github account [${data.github}](https://github.com/${data.github}) .
   
 
   ## Credits
