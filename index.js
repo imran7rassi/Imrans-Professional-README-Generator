@@ -12,6 +12,7 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 const questions = [
 
 // this is the title of the project //
+// if there is no title entered return to an err //
 
     {
         type: 'input',
@@ -28,20 +29,60 @@ const questions = [
     },
 
 // this is the description of the project //
+// if there is no input for description return to an err //
 
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project (Required)',
+        message: 'Provide a description of your project? (Required)',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
             } else {
-                console.log('You need to provide a project description!');
+                console.log('You need to provide a description of your project!');
                 return false;
             }
         }
     },
+
+        
+// this is the installation of the project //
+// if there is no input for installation return to an err //
+
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'How do you install your project? (Required)',
+        validate: installationInput => {
+            if (installationInput) {
+                return true;
+            } else {
+                console.log('You need to provide installation info to continue!');
+                return false;
+            }
+        }
+    },
+
+
+// this is the usage of the project //
+// if there is no input for usages return to an err //
+
+    {
+        type: 'input',
+        name: 'usages',
+        message: 'How do you use this project? (Required)',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('You need to provide information on how to use project!');
+                return false;
+            }
+        }
+    },
+    
+
+
 ];
 
 // TODO: Create a function to write README file
