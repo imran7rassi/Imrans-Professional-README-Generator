@@ -77,15 +77,16 @@ function generateMarkdown(data) {
 
 
   ## Questions
-  If you have questions about this project you can email me through the mail or find my github account?  
-  Email: ${data.email}  GitHub: https://github.com/${data.github}  
+  If you have questions about this project you can email me ${data.email} through the mail or find my github account ${data.github} .
   
+
   ## Credits
   ${data.name}
 
-  _This README was generated with ❤️ by [README-generator](https://github.com/imran7rassi/Imrans-Professional-README-Generator.git)
+  - This README was generated with ❤️ by [README-generator](https://github.com/imran7rassi/Imrans-Professional-README-Generator.git)
 
 `;
+
 }
 
 module.exports = generateMarkdown;
