@@ -55,6 +55,36 @@ function generateMarkdown(data) {
 
 
 
+  ## Installation
+  To install this app follow these steps:
+
+  ${data.installation}
+
+
+  ## Usage
+  ${data.usage}
+
+
+  ${renderLicenseSection(data.licenses)}
+
+
+  ## Contributing
+    ${data.contribuing}
+
+
+  ## Tests
+    ${data.tests}
+
+
+  ## Questions
+  If you have questions about this project you can email me through the mail or find my github account?  
+  Email: ${data.email}  GitHub: https://github.com/${data.github}  
+  
+  ## Credits
+  ${data.name}
+
+  _This README was generated with ❤️ by [README-generator](https://github.com/imran7rassi/Imrans-Professional-README-Generator.git)
+
 `;
 }
 
