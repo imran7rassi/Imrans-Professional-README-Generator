@@ -83,7 +83,7 @@ function generateMarkdown(data) {
   ## Credits
   ${data.name}
 
-  - This README was generated with ❤️ by [README-generator](https://github.com/imran7rassi/Imrans-Professional-README-Generator.git)
+  - This README was generated with ❤️ by [Imarn Rasi](https://github.com/imran7rassi/Imrans-Professional-README-Generator.git)
 
 `;
 

@@ -6,6 +6,10 @@
 
 This is a command line interface application which creates a README file for your application repositories. When creating an open source project on GitHub, it is important to have a quality README with information about the app.  A command-line application will allow for quick and easy generation of a project README to get started quickly.With this README generator, you no longer need to create a professional README from scratch. Simply answer a few questions and watch as a README is created before your very eyes. Please enjoy the generator!
 
+## Demo
+
+<img src="./utils/README.generator gif.gif"><br>
+
 ## Table of Content
 
   - [Installation](#installation)
