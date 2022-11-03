@@ -125,7 +125,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'testing',
+        name: 'test',
         message: 'How do you test this project? (Required)',
         validate: testingInput => {
             if (testingInput) {
