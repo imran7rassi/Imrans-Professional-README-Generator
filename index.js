@@ -183,7 +183,7 @@ const questions = [
             if (githubInput) {
                 return true;
             } else {
-                console.log('Please enter your GitHub username!');
+                console.log('Enter your GitHub username!');
                 return false;
             }
         }
@@ -197,7 +197,7 @@ const questions = [
 // this is the fucntuin that write the file into the readme file //
 
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, generateMarkdown(data), function (err) {
+    fs.writeFile(fileName, data, function (err) {
         if (err) {
             return console.log(err);
         }
